@@ -1,101 +1,133 @@
 /* General Reset */
 body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* Header */
-  header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  header h1 {
-    text-align: center;
-  }
-  header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-  }
-  header nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: #f4f4f4;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 20px;
-    text-align: center;
-    background: #e2e2e2;
-  }
-  
-  /* Blog Section */
-  .blog {
-    padding: 20px;
-  }
-  .blog .posts {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .blog article {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    width: 300px;
-    text-align: center;
-  }
-  .blog article h3 {
-    margin-bottom: 10px;
-  }
-  .blog article a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  /* Contact Section */
-  .contact {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-  }
-  .contact .button {
-    display: inline-block;
-    margin-top: 10px;
-    background: #ff6600;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+header h1 {
+  text-align: center;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* About Section */
+.about {
+  padding: 20px;
+  text-align: center;
+  background: #e2e2e2;
+}
+
+/* Blog Section */
+.blog {
+  padding: 20px;
+}
+.blog .posts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blog article {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+}
+.blog article h3 {
+  margin-bottom: 10px;
+}
+.blog article a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.contact .button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+/* Hidden Details Section */
+.hidden-details {
+display: none;
+background: #fff;
+border: 1px solid #ddd;
+padding: 20px;
+margin-top: 20px;
+border-radius: 5px;
+}
+
+.hidden-details h3 {
+margin-bottom: 15px;
+}
+
+.hidden-details ol {
+padding-left: 20px;
+}
+
+button.read-more, button.go-back {
+display: inline-block;
+margin-top: 10px;
+background: #007BFF;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+}
+
+button.read-more:hover, button.go-back:hover {
+background: #0056b3;
+}
