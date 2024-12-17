@@ -154,7 +154,8 @@ button.go-back:hover {
 /* Images Adjustments */
 .hero-image,
 .secondary-image,
-.post-image,{
+.post-image,
+{
 width: 90%;
 max-width: 900px;
 /* Reduced size */
@@ -205,8 +206,7 @@ margin-bottom: 15px;
   .container {
     padding: 0 10px;
   }
-
+}
   footer {
     padding: 20px 10px;
   }
-}
