@@ -210,3 +210,16 @@ margin-bottom: 15px;
   footer {
     padding: 20px 10px;
   }
+  /* Style for the Login Button in Header */
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
