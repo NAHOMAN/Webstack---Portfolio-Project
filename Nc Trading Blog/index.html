@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NC Trade Personal Blog</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="/script/script.js"></script>
+  <script defer src="/script/script.js"></script>
 </head>
 <body>
   <header>
@@ -13,8 +13,8 @@
       <h1>NC Trade Hub</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="#login" class="login-button">Login</a></li>
@@ -24,7 +24,7 @@
   </header>
 
   <main>
-    <!-- Hero Section with Images -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
       <h2>Welcome to NC Trade</h2>
       <p>Your go-to platform for trade insights and inspiration.</p>
@@ -40,9 +40,13 @@
       <img src="images/about-image.jpg" alt="About NC Trade" class="about-image">
     </section>
 
-    <!-- Blog Section with Post Images -->
+    <!-- Blog Section -->
     <section id="blog" class="blog">
       <h2>Recent Posts</h2>
+      <div class="posts" id="postsContainer">
+        <!-- Blog posts will be dynamically injected here -->
+      </div>
+      
       <div class="posts">
         <article>
           <img src="images/tips-image.jpg" alt="Trading Tips" class="post-image">
@@ -57,8 +61,8 @@
           <button class="read-more" data-target="#trend-details">Read More</button>
         </article>
       </div>
-    
-      <!-- Hidden Details Section: 5 Tips -->
+      
+      <!-- Hidden Details Section -->
       <div id="tip-details" class="hidden-details">
         <h3>5 Tips to Start Your Trading Journey</h3>
         <ol>
@@ -70,8 +74,7 @@
         </ol>
         <button class="go-back">Go Back</button>
       </div>
-    
-      <!-- Hidden Details Section: Market Trends -->
+      
       <div id="trend-details" class="hidden-details">
         <h3>Understanding Market Trends</h3>
         <ol>
@@ -85,7 +88,7 @@
       </div>
     </section>
 
-    <!-- Contact Section with Image -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <p>Have questions or want to share your story? Reach out to us!</p>
@@ -97,6 +100,5 @@
   <footer>
     <p>&copy; 2024 NC Trade Personal Blog. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

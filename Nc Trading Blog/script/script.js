@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   readMoreButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const target = document.querySelector(button.dataset.target);
-      target.style.display = "block"; // Show the details
-      button.parentElement.style.display = "none"; // Hide the blog post
+      if (target) {
+        target.style.display = "block"; // Show the details
+        button.closest("article").style.display = "none"; // Hide the blog post
+      }
     });
   });
 
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const hiddenDetails = document.querySelectorAll(".hidden-details");
       hiddenDetails.forEach((detail) => (detail.style.display = "none")); // Hide all details
-      document.querySelectorAll(".posts article").forEach((post) => {
+      document.querySelectorAll(".blog article").forEach((post) => {
         post.style.display = "block"; // Show all blog articles again
       });
     });
@@ -57,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Feature 3: Interactive Navbar with Active State
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav ul li a");
+  const navLinks = document.querySelectorAll("header nav a");
 
   window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 50; // Adjust for fixed header
+      const sectionTop = section.offsetTop - 60; // Adjust for fixed header
       if (window.scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
@@ -78,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Feature 4: Image Hover Zoom Effect
-  const images = document.querySelectorAll("img");
+  const images = document.querySelectorAll(".post-image, .about-image, .contact-image");
 
   images.forEach((image) => {
     image.style.transition = "transform 0.3s ease-in-out";
@@ -89,4 +91,31 @@ document.addEventListener("DOMContentLoaded", () => {
       image.style.transform = "scale(1)";
     });
   });
+
+  // Feature 5: Load Blog Posts Dynamically
+  const postsContainer = document.querySelector(".blog .posts");
+
+  fetch("/data/posts.json")
+    .then((response) => response.json())
+    .then((posts) => {
+      posts.forEach((post) => {
+        const article = document.createElement("article");
+        article.innerHTML = `
+          <img src="${post.image}" alt="${post.title}" class="post-image">
+          <h3>${post.title}</h3>
+          <p>${post.description}</p>
+          <button class="read-more" data-target="#${post.id}">Read More</button>
+          <div id="${post.id}" class="hidden-details">
+            <h3>${post.detailsTitle}</h3>
+            <p>${post.details}</p>
+            <button class="go-back">Go Back</button>
+          </div>
+        `;
+        postsContainer.appendChild(article);
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading blog posts:", error);
+      postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
+    });
 });
