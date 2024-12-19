@@ -165,4 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
     readMoreAboutBtn.style.display = "inline-block";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const ctaButton = document.querySelector(".cta-button");
+
+  ctaButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: document.querySelector("#about").offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
 
