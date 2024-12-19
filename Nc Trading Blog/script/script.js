@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
+  
   // Feature 2: Back to Top Button
   const backToTop = document.createElement("button");
   backToTop.innerText = "↑ Back to Top";
@@ -119,3 +119,35 @@ document.addEventListener("DOMContentLoaded", () => {
       postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const signUpBtn = document.getElementById("sign-up-btn");
+  const signInBtn = document.getElementById("sign-in-btn");
+  const authModal = document.getElementById("auth-modal");
+  const closeBtn = document.querySelector(".auth-modal .close");
+  const signUpForm = document.getElementById("sign-up-form");
+  const signInForm = document.getElementById("sign-in-form");
+
+  signUpBtn.addEventListener("click", () => {
+    authModal.style.display = "block";
+    signUpForm.style.display = "block";
+    signInForm.style.display = "none";
+  });
+
+  signInBtn.addEventListener("click", () => {
+    authModal.style.display = "block";
+    signUpForm.style.display = "none";
+    signInForm.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    authModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target == authModal) {
+      authModal.style.display = "none";
+    }
+  });
+});
+
