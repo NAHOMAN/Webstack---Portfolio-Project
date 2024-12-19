@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
     });
 });
-
+// Feature 6: sign up and sign in Effect
 document.addEventListener("DOMContentLoaded", () => {
   const signUpBtn = document.getElementById("sign-up-btn");
   const signInBtn = document.getElementById("sign-in-btn");
@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// Feature 7: readmore Effect
 document.addEventListener("DOMContentLoaded", () => {
   const readMoreAboutBtn = document.getElementById("read-more-about");
   const readLessAboutBtn = document.getElementById("read-less-about");
@@ -175,4 +176,66 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// Feature 8: meau-toggle Effect
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.querySelector("header nav ul");
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  const navLinks = document.querySelectorAll("header nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove("active");
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth Scroll for "Get Started" Button
+  const ctaButton = document.querySelector(".cta-button");
+
+  ctaButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: document.querySelector("#about").offsetTop,
+      behavior: "smooth",
+    });
+  });
+
+  // Fade-in Animation for Hero Content
+  const heroContent = document.querySelector(".hero-content");
+
+  window.addEventListener("scroll", () => {
+    const heroSection = document.querySelector(".hero");
+    const heroPosition = heroSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
+
+    if (heroPosition < screenPosition) {
+      heroContent.classList.add("fade-in");
+    }
+  });
+});
