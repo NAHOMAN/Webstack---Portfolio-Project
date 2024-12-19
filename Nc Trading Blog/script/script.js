@@ -150,4 +150,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const readMoreAboutBtn = document.getElementById("read-more-about");
+  const readLessAboutBtn = document.getElementById("read-less-about");
+  const aboutDetails = document.getElementById("about-details");
+
+  readMoreAboutBtn.addEventListener("click", () => {
+    aboutDetails.style.display = "block";
+    readMoreAboutBtn.style.display = "none";
+  });
+
+  readLessAboutBtn.addEventListener("click", () => {
+    aboutDetails.style.display = "none";
+    readMoreAboutBtn.style.display = "inline-block";
+  });
+});
 

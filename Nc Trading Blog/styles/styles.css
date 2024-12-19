@@ -166,7 +166,7 @@ header nav a {
   max-width: 100%;
 }
 
-/* About Section */
+
 /* About Section */
 .about {
   padding: 40px 20px;
@@ -217,7 +217,30 @@ header nav a {
   margin-top: 30px;
 }
 
+.hidden-details {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
 
+button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background: #0056b3;
+}
 /* Blog Section */
 .blog {
   padding: 20px;
