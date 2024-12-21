@@ -201,12 +201,12 @@ header.scrolled h1 {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url('images/your-image.jpg') no-repeat center center/cover;
-  /* Replace 'images/your-image.jpg' with the path to your image */
+  background: url('images/hero.jpg') no-repeat center center/cover; 
   text-align: center;
   padding: 100px 20px;
   color: #fff;
 }
+
 
 .hero-content {
   position: relative;
@@ -263,7 +263,7 @@ header.scrolled h1 {
 /* About Section */
 .about {
   padding: 40px 20px;
-  background: #f4f4f4;
+  background: #f0d3d3;
   text-align: center;
 }
 
