@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const postsContainer = document.getElementById("postsContainer");
 
-  fetch("/data/posts.json")
+  fetch("posts.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -251,6 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((posts) => {
+      postsContainer.innerHTML = ''; // Clear existing posts
       posts.forEach((post) => {
         const article = document.createElement("article");
         article.classList.add("blog-post");
@@ -285,4 +286,3 @@ document.querySelector('a[href="#blog"]').addEventListener('click', function(e) 
     behavior: 'smooth'
   });
 });
-

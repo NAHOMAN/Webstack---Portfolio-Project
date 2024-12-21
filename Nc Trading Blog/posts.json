@@ -15,8 +15,15 @@
   },
   {
     "id": "post3",
-    "title": "Understanding Market Trends",
-    "preview": "Understanding market trends is essential for making informed trading decisions. Here's what you need to know...",
+    "title": "How to Manage Trading Risks",
+    "preview": "Risk management is a key component of successful trading. Learn how to mitigate your risks effectively...",
+    "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+    "image": "images/nah.jpg"
+  },
+  {
+    "id": "post4",
+    "title": "How to Manage Trading Risks",
+    "preview": "Risk management is a key component of successful trading. Learn how to mitigate your risks effectively...",
     "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
     "image": "images/nah.jpg"
   }
