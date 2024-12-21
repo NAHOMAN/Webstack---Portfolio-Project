@@ -362,6 +362,9 @@ button:hover {
   text-decoration: none;
   font-weight: bold;
 }
+.hidden {
+  display: none;
+}
 
 /* Contact Section */
 .contact {
