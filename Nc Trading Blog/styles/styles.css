@@ -83,8 +83,9 @@ header nav a:hover {
 }
 
 .auth-buttons button:hover {
-  background-color: #e55d00;
+  background: #0056b3;
 }
+
 
 /* Responsive Menu */
 .menu-toggle {
@@ -97,32 +98,6 @@ header nav a:hover {
   position: absolute;
   right: 20px;
   top: 20px;
-}
-
-@media (max-width: 768px) {
-  header nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: #007bff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  header nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .auth-buttons {
-    display: none;
-  }
 }
 
 /* Header Scroll Effect */
@@ -186,7 +161,7 @@ header.scrolled h1 {
 .auth-form button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background: #0056b3;
   color: white;
   border: none;
   border-radius: 5px;
@@ -232,7 +207,7 @@ header.scrolled h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.cta-button {
+.start-button {
   background-color: #ff6600;
   color: #fff;
   padding: 15px 30px;
@@ -241,10 +216,6 @@ header.scrolled h1 {
   font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e55d00;
 }
 
 /* Overlay for better text visibility */
@@ -424,11 +395,7 @@ button.go-back:hover {
   background: #0056b3;
 }
 
-
-
-.post-image,
-.contact-image,
-.about-image {
+.post-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -454,8 +421,6 @@ button.go-back:hover {
     margin-bottom: 20px;
   }
 
-
-
   .container {
     padding: 0 10px;
   }
@@ -465,20 +430,25 @@ footer {
   padding: 20px 10px;
 }
 
-/* Login Button */
-.login-button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #007bff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.login-button:hover {
-  background-color: #0056b3;
-}
+  header nav ul.active {
+    display: flex;
+  }
 
-a:hover {
-  color: #ff6600;
+  .menu-toggle {
+    display: block;
+  }
+
 }

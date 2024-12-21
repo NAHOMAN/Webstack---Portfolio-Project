@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   // Smooth Scroll for "Get Started" Button
-  const ctaButton = document.querySelector(".cta-button");
+  const ctaButton = document.querySelector(".start-button");
 
   ctaButton.addEventListener("click", () => {
     window.scrollTo({
