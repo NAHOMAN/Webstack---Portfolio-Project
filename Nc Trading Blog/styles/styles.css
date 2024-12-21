@@ -175,12 +175,14 @@ header.scrolled h1 {
 
 /* Hero Section */
 .hero {
+  background: url('images/main.jpg') no-repeat center center/cover;
   position: relative;
   background: black;
   text-align: center;
   padding: 100px 20px;
   color: #fff;
 }
+
 
 .hero-content {
   position: relative;
