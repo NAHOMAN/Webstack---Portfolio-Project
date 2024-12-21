@@ -1,13 +1,23 @@
 [
-    {
-      "title": "5 Tips to Start Your Trading Journey",
-      "description": "Learn the essentials to kickstart your trading career. These tips will help you avoid common pitfalls and build a solid foundation.",
-      "image": "images/tips-image.jpg"
-    },
-    {
-      "title": "Understanding Market Trends",
-      "description": "Dive deep into how markets fluctuate and why it matters for traders and investors.",
-      "image": "images/market-trends-image.jpg"
-    }
-  ]
-  
+  {
+    "id": "post1",
+    "title": "5 Tips to Start Your Trading Journey",
+    "preview": "Starting your trading journey can be overwhelming, but these five tips will help you build a solid foundation...",
+    "fullText": "To begin trading: <ol><li>Understand trading basics: stocks, forex, and cryptocurrencies.</li><li>Choose a strategy: day trading or long-term investing.</li><li>Open a demo account and practice risk-free.</li><li>Master risk management with stop-loss orders.</li><li>Stay informed about the market trends and news.</li></ol>",
+    "image": "images/tips-image.jpg"
+  },
+  {
+    "id": "post2",
+    "title": "Understanding Market Trends",
+    "preview": "Understanding market trends is essential for making informed trading decisions. Here's what you need to know...",
+    "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+    "image": "images/market-trends-image.jpg"
+  },
+  {
+    "id": "post3",
+    "title": "Understanding Market Trends",
+    "preview": "Understanding market trends is essential for making informed trading decisions. Here's what you need to know...",
+    "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+    "image": "images/nah.jpg"
+  }
+]
