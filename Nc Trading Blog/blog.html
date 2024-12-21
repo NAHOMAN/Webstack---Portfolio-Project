@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles/blog.css">
   <script src="script/blog.js"></script>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -14,10 +16,10 @@
       <h1>NC Trade Hub</h1>
       <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -25,51 +27,9 @@
 
   <!-- Blog Section -->
   <main>
-    <section id="blog">
-      <div class="container">
-        <h2>Latest Blog Posts</h2>
-        
-        <!-- Blog Post 1 -->
-        <article class="blog-post">
-          <h3>5 Tips to Start Your Trading Journey</h3>
-          <p class="preview-text">Starting your trading journey can be overwhelming, but these five tips will help you build a solid foundation...</p>
-          <p class="full-text hidden">To begin trading: 
-            <ol>
-              <li>Understand trading basics: stocks, forex, and cryptocurrencies.</li>
-              <li>Choose a strategy: day trading or long-term investing.</li>
-              <li>Open a demo account and practice risk-free.</li>
-              <li>Master risk management with stop-loss orders.</li>
-              <li>Stay informed about the market trends and news.</li>
-            </ol>
-          </p>
-          <button class="read-more-btn">Read More</button>
-        </article>
-        
-        <!-- Blog Post 2 -->
-        <article class="blog-post">
-          <h3>Understanding Market Trends</h3>
-          <p class="preview-text">Understanding market trends is essential for making informed trading decisions. Here's what you need to know...</p>
-          <p class="full-text hidden">Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.</p>
-          <button class="read-more-btn">Read More</button>
-        </article>
-
-        <!-- Blog Post 3 -->
-        <article class="blog-post">
-          <h3>How to Manage Trading Risks</h3>
-          <p class="preview-text">Risk management is a key component of successful trading. Learn how to mitigate your risks effectively...</p>
-          <p class="full-text hidden">Always use stop-loss orders, diversify your investments, and avoid over-leveraging. Successful traders know how to limit losses.</p>
-          <button class="read-more-btn">Read More</button>
-        </article>
-
-        <!-- Blog Post 4 -->
-        <article class="blog-post">
-          <h3>Top Trading Strategies in 2024</h3>
-          <p class="preview-text">With 2024 approaching, prepare for the best trading strategies of the year...</p>
-          <p class="full-text hidden">In 2024, AI-driven analysis, swing trading, and adaptive algorithms will dominate markets. Stay agile and innovate!</p>
-          <button class="read-more-btn">Read More</button>
-        </article>
-
-      </div>
+    <section id="blog" class="blog">
+      <h2>Blog Posts</h2>
+      <div class="posts" id="postsContainer"> <!-- Blog posts will be dynamically injected here --> </div>
     </section>
   </main>
 
@@ -78,7 +38,5 @@
     <p>&copy; 2024 NC Trade Personal Blog. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="scripts/blog.js"></script>
 </body>
 </html>

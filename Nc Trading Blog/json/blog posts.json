@@ -1,0 +1,31 @@
+[
+    {
+      "id": "post1",
+      "title": "5 Tips to Start Your Trading Journey",
+      "preview": "Starting your trading journey can be overwhelming, but these five tips will help you build a solid foundation...",
+      "fullText": "To begin trading:Understand trading basics: stocks, forex, and cryptocurrencies.Choose a strategy: day trading or long-term investing.Open a demo account and practice risk-free.Master risk management with stop-loss orders.Stay informed about the market trends and news.",
+      "image": "images/tips-image.jpg"
+    },
+    {
+      "id": "post2",
+      "title": "Understanding Market Trends",
+      "preview": "Understanding market trends is essential for making informed trading decisions. Here's what you need to know...",
+      "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+      "image": "images/market-trends-image.jpg"
+    },
+    {
+      "id": "post3",
+      "title": "How to Manage Trading Risks",
+      "preview": "Risk management is a key component of successful trading. Learn how to mitigate your risks effectively...",
+      "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+      "image": "images/Risk-Management.jpeg"
+    },
+    {
+      "id": "post4",
+      "title": "Cryptocurrency",
+      "preview": "Cryptocurrencies such as Bitcoin are digital currencies not backed by real assets or tangible securities. They are traded between consenting parties with no broker and tracked on digital ledgers...",
+      "fullText": "Markets move in cycles: bullish (rising), bearish (falling), and sideways (neutral). Learn to analyze patterns and indicators like moving averages, RSI, and volume.",
+      "image": "images/Crypto.jpg"
+    }
+  ]
+  
