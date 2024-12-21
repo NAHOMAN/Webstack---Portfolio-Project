@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-  
+
   // Feature 2: Back to Top Button
   const backToTop = document.createElement("button");
   backToTop.innerText = "↑ Back to Top";
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.querySelector('a[href="#blog"]').addEventListener('click', function(e) {
+document.querySelector('a[href="#blog"]').addEventListener('click', function (e) {
   e.preventDefault();
   document.querySelector('#blog').scrollIntoView({
     behavior: 'smooth'

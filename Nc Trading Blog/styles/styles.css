@@ -201,7 +201,8 @@ header.scrolled h1 {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url('images/your-image.jpg') no-repeat center center/cover; /* Replace 'images/your-image.jpg' with the path to your image */
+  background: url('images/your-image.jpg') no-repeat center center/cover;
+  /* Replace 'images/your-image.jpg' with the path to your image */
   text-align: center;
   padding: 100px 20px;
   color: #fff;
@@ -333,6 +334,7 @@ button {
 button:hover {
   background: #0056b3;
 }
+
 /* Blog Section */
 .blog {
   padding: 20px;
@@ -353,15 +355,6 @@ button:hover {
   text-align: center;
 }
 
-.blog article h3 {
-  margin-bottom: 10px;
-}
-
-.blog article a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
 .hidden {
   display: none;
 }
