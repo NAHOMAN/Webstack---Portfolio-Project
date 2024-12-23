@@ -175,7 +175,7 @@ header.scrolled h1 {
 
 /* Hero Section */
 .hero {
-  background: url('images/main.jpg') no-repeat center center/cover;
+  background: url('images/hero-background.jpg') no-repeat center center;
   position: relative;
   background: black;
   text-align: center;
@@ -234,10 +234,13 @@ header.scrolled h1 {
 
 /* About Section */
 .about {
-  padding: 40px 20px;
-  background: #f0d3d3;
+  background-size: cover;
+  color: white;
+  padding: 50px 20px;
+  position: relative;
   text-align: center;
 }
+
 
 .about h2 {
   font-size: 2.5em;
@@ -276,10 +279,11 @@ header.scrolled h1 {
 
 .about-image {
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 800px;
+  height: 400px;
+  display: block;
+  margin: 20px auto;
   border-radius: 8px;
-  margin-top: 30px;
 }
 
 .hidden-details {
@@ -308,6 +312,25 @@ button:hover {
 }
 
 /* Blog Section */
+.post {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.post p {
+  font-size: 1em;
+  line-height: 1.6;
+}
 .blog {
   padding: 20px;
 }

@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Feature 5: Load Blog Posts Dynamically
   const postsContainer = document.querySelector(".blog .posts");
 
-  fetch("json/Recent blog Posts.json")
+  fetch("json/blog Posts.json")
     .then((response) => response.json())
     .then((posts) => {
       posts.forEach((post) => {
