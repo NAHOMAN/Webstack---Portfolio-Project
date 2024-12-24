@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Feature 5: Load Blog Posts Dynamically
   const postsContainer = document.querySelector(".blog .posts");
 
-  fetch("json/blog Posts.json")
+  fetch("json/recent blog Posts.json")
     .then((response) => response.json())
     .then((posts) => {
       posts.forEach((post) => {
@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         postsContainer.appendChild(article);
+        
       });
     })
     .catch((error) => {
@@ -119,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
       postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
     });
 });
+
 // Feature 6: sign up and sign in Effect
 document.addEventListener("DOMContentLoaded", () => {
   const signUpBtn = document.getElementById("sign-up-btn");
