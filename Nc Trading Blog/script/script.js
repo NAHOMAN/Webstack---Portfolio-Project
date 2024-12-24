@@ -112,9 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         postsContainer.appendChild(article);
-        
       });
     })
+  
     .catch((error) => {
       console.error("Error loading blog posts:", error);
       postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
