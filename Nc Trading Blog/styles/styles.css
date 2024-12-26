@@ -88,7 +88,7 @@ header nav ul li a {
 
 /* Style the search container */
 .search-container {
-  max-width: 300px; 
+  max-width: 200px; 
   width: 100%; 
 }
 #searchInput {
@@ -97,6 +97,9 @@ header nav ul li a {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.search-button{
+  display: flex;
 }
 
 
