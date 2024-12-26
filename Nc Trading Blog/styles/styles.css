@@ -14,16 +14,15 @@ li {
 header {
   background: linear-gradient(90deg, #333, #333);
   color: #fff;
-  padding: 20px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: space-between;
-  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: background 0.3s ease;
-  position: relative; /* Add this to ensure proper positioning */
+  position: relative; 
 }
 header h1 {
   color: #fff;
@@ -81,13 +80,14 @@ header nav ul li a {
 /* the search bar in the header-right */
 .header-right {
   display: flex;
-  justify-content: center; 
-  flex: 1; 
+  right: 20px; 
+  bottom: 20px;
+  position: absolute;
+  gap: 50px;
 }
 
 /* Style the search container */
 .search-container {
-  position: relative;
   max-width: 300px; 
   width: 100%; 
 }
@@ -103,9 +103,8 @@ header nav ul li a {
 .auth-buttons {
   display: flex;
   gap: 10px;
-  position: absolute;
-  right: 20px; 
-  bottom: 20px;
+  right: 30px; 
+  bottom: 10px;
   
 }
 
