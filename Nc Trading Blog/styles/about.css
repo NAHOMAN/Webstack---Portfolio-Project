@@ -24,7 +24,16 @@ body, h1, h2, h3, p, ul, li {
   }
   
   header h1 {
-    text-align: center;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    left: 20px; 
+    top: 20px;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    transition: transform 0.3s ease;
   }
   
   header nav ul {
@@ -36,7 +45,12 @@ body, h1, h2, h3, p, ul, li {
   
   header nav a {
     color: #fff;
-    text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+  }
+  header nav a:hover {
+    color: #ff6600;
   }
   
   /* About Section */
