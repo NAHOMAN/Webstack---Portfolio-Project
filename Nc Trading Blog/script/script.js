@@ -292,6 +292,15 @@ fetch("json/blog Posts.json")
   })
   .catch(error => console.error("Error fetching blog posts:", error));
 
+// Debounce function to prevent excessive searches while typing
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), delay);
+  };
+}
+
 // Function to update suggestions
 function searchPosts() {
   const query = searchInput.value.toLowerCase();

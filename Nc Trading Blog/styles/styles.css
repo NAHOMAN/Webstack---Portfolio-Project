@@ -203,6 +203,8 @@ header nav ul li a {
   width: 80%;
   max-width: 400px;
   border-radius: 10px;
+  position: relative;
+
 }
 
 .auth-modal-content .close {
