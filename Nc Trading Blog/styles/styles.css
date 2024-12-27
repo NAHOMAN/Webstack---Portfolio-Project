@@ -40,9 +40,7 @@ header h1 {
 header nav ul {
   color: #fff;
   display: flex;
-  justify-content: center;
   gap: 20px;
-  list-style: none;
   align-items: center;
 }
 
@@ -79,37 +77,95 @@ header nav ul li a {
 /* the search bar in the header-right */
 .header-right {
   display: flex;
+  align-items: center;
   right: 20px; 
-  bottom: 20px;
+  bottom: 10px;
   position: absolute;
-  gap: 50px;
-  float: left;
+  gap: 30px;
 }
 
 /* Style the search container */
 .search-container {
-  max-width: 200px; 
-  width: 100%; 
+  display: flex;
+  gap: 10px;
+  
 }
-#searchInput {
-  width: 100%;
-  padding: 8px 12px;
+.search-container input {
+  padding: 5px 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.search-button{
-  display: flex;
+.search-container .search-button:hover {
+  background-color: #ff6600;
 }
 
-
+.search-button{
+  display: flex;
+  gap: 10px;
+}
+.suggestions {
+  position: absolute;
+  top: 100%; /* Position below the input field */
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #fff;
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+.suggestion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+.suggestion-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.suggestion-details h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.suggestion-details p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+.suggestions.hidden {
+  display: none;
+}
+.suggestions div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.suggestions div:hover {
+  background-color: #f0f0f0;
+}
+.suggestions .highlight {
+  font-weight: bold;
+  color: #007BFF;
+}
 .auth-buttons {
   display: flex;
   gap: 10px;
   right: 30px; 
   bottom: 10px;
-  float: right;
-  
+ 
 }
 
 .auth-buttons button {

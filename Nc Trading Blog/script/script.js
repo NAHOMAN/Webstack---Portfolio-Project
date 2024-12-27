@@ -280,3 +280,73 @@ document.addEventListener("DOMContentLoaded", () => {
       postsContainer.innerHTML = `<p>Unable to load posts at this time.</p>`;
     });
 });
+const searchInput = document.getElementById("searchInput");
+const suggestionsContainer = document.getElementById("suggestions");
+let blogPosts = [];
+
+// Fetch blog posts from JSON file
+fetch("json/blog Posts.json")
+  .then(response => response.json())
+  .then(data => {
+    blogPosts = data;
+  })
+  .catch(error => console.error("Error fetching blog posts:", error));
+
+// Function to update suggestions
+function searchPosts() {
+  const query = searchInput.value.toLowerCase();
+  suggestionsContainer.innerHTML = ""; // Clear previous suggestions
+
+  if (query.trim() === "") {
+    suggestionsContainer.classList.add("hidden");
+    return;
+  }
+
+  // Filter blog posts based on query
+  const filteredPosts = blogPosts.filter(post =>
+    post.title.toLowerCase().includes(query) || post.preview.toLowerCase().includes(query)
+  );
+
+  // Display suggestions
+  if (filteredPosts.length > 0) {
+    filteredPosts.forEach(post => {
+      const suggestion = document.createElement("div");
+      suggestion.className = "suggestion-item";
+
+      // Create HTML for suggestion with thumbnail, title, and preview
+      suggestion.innerHTML = `
+        <img src="${post.image}" alt="${post.title}" class="suggestion-thumbnail">
+        <div class="suggestion-details">
+          <h4>${highlightText(post.title, query)}</h4>
+          <p>${highlightText(post.preview, query)}</p>
+        </div>
+      `;
+
+      // Add click event to fill input and hide suggestions
+      suggestion.addEventListener("click", () => {
+        searchInput.value = post.title; // Fill input with selected title
+        suggestionsContainer.classList.add("hidden");
+        // Optionally, redirect to the blog post page or show the full post
+        console.log("Selected Post:", post);
+      });
+
+      suggestionsContainer.appendChild(suggestion);
+    });
+    suggestionsContainer.classList.remove("hidden");
+  } else {
+    suggestionsContainer.classList.add("hidden");
+  }
+}
+
+// Highlight matching text in a string
+function highlightText(text, query) {
+  const regex = new RegExp(query, "gi");
+  return text.replace(regex, match => `<span class="highlight">${match}</span>`);
+}
+
+// Close suggestions when clicking outside
+document.addEventListener("click", event => {
+  if (!event.target.closest(".search-container")) {
+    suggestionsContainer.classList.add("hidden");
+  }
+});
