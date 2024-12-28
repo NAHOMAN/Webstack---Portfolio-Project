@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  #user-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #user-details {
+    margin-top: 10px;
+  }
+  
+  #user-details p {
+    margin: 10px 0;
+  }
+  
+  #user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  #user-actions {
+    margin-top: 20px;
+  }
+  
+  #update-profile-btn {
+    background-color: #28a745;
+  }
+  
+  #update-profile-btn:hover {
+    background-color: #218838;
+  }
+  #user-posts, #user-activity {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #posts-list .post, #user-activity .activity {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  #posts-list .post:last-child, #user-activity .activity:last-child {
+    border-bottom: none;
+  }
+  
+  #profile-update {
+    margin-top: 30px;
+  }
+  
+  #profile-update input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  #profile-update button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+  }
+  

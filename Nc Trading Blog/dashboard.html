@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NC Traders Hub: Your go-to platform for trade insights and inspiration.">
+  <meta name="keywords" content="trading, market insights, trading blog, investment, trading tips">
+  <title>NC Trade Personal Blog</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="script/script.js"></script>
+  <script type="module" src="script/auth.js"></script>
+  <script type="module" src="script/dashboard.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>NC Traders Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="logout-btn" type="button">Log Out</button></li>
+        </ul>
+      </nav>
+      <h2>Welcome to your dashboard</h2>
+      </div>
+  </header>
+
+  <main>
+    
+    <section id="user-info">
+      <h2>User Information</h2>
+      <div id="user-details">
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+        <p><strong>Name:</strong> <span id="user-name"></span></p>
+        <p><strong>UID:</strong> <span id="user-id"></span></p>
+        <p><strong>Profile Picture:</strong> <img id="user-photo" src="" alt="User Photo" />
+      </div>
+    </section>
+
+    <section id="user-actions">
+      <h2>Actions</h2>
+      <button id="update-profile-btn">Update Profile</button>
+    </section>
+    <section id="user-posts">
+      <h2>Your Posts</h2>
+      <div id="posts-list"></div>
+    </section>
+    
+  </main>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to share your story? Reach out to us!</p>
+    <a href="contact.html" class="button">Email Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 NC Traders Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
