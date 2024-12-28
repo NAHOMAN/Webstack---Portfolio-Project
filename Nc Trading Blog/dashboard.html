@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="NC Traders Hub: Your go-to platform for trade insights and inspiration.">
   <meta name="keywords" content="trading, market insights, trading blog, investment, trading tips">
-  <title>NC Trade Personal Blog</title>
+  <title>NC Traders Hub - Personal Blog</title>
   <link rel="stylesheet" href="styles/styles.css">
   <script defer src="script/script.js"></script>
   <script type="module" src="script/auth.js"></script>
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <!-- Header Section -->
   <header>
     <div class="container">
       <h1>NC Traders Hub</h1>
@@ -26,12 +27,17 @@
           <li><button id="logout-btn" type="button">Log Out</button></li>
         </ul>
       </nav>
-      <h2>Welcome to your dashboard</h2>
-      </div>
+    </div>
   </header>
 
+  <!-- Main Content Section -->
   <main>
-    
+    <section id="dashboard-intro">
+      <h2>Welcome to Your Dashboard</h2>
+      <p>Manage your profile, explore your posts, and continue your trading journey.</p>
+    </section>
+
+    <!-- User Info Section -->
     <section id="user-info">
       <h2>User Information</h2>
       <div id="user-details">
@@ -41,26 +47,40 @@
         <p><strong>Profile Picture:</strong> <img id="user-photo" src="" alt="User Photo" />
       </div>
     </section>
-
+    
+    <!-- User Actions Section -->
     <section id="user-actions">
-      <h2>Actions</h2>
+      <h3>Actions</h3>
       <button id="update-profile-btn">Update Profile</button>
     </section>
-    <section id="user-posts">
-      <h2>Your Posts</h2>
-      <div id="posts-list"></div>
+
+    <!-- User Posts Section -->
+    <section id="create-post">
+      <h2>Create a Post</h2>
+      <form id="post-form">
+        <label for="post-title">Post Title:</label>
+        <input type="text" id="post-title" required>
+    
+        <label for="post-content">Post Content:</label>
+        <textarea id="post-content" required></textarea>
+    
+        <button type="submit">Submit Post</button>
+      </form>
     </section>
     
   </main>
+
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Have questions or want to share your story? Reach out to us!</p>
     <a href="contact.html" class="button">Email Us</a>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer>
     <p>&copy; 2024 NC Traders Hub. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
