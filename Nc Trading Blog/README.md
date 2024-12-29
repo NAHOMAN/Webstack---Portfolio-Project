@@ -19,7 +19,7 @@ Access the homepage to view featured and recent posts.
 Click on a post title or image to view full content.
 Modify Content
 
-Content is stored in src/data/posts. Update the JSON files to add or modify blog posts.
+Content is stored in images/styles/json/. Update the JSON files to add or modify blog posts.
 Custom Styling
 
 Edit the styles in src/styles to match your desired theme.
@@ -28,17 +28,14 @@ Edit the styles in src/styles to match your desired theme.
 # Project Architecture
 The NC Personal Blog is structured as follows:
 NC-Personal-Blog/
-├── public/         # Static assets (images, favicon, etc.)
-├── src/
-│   ├── components/ # Reusable React components
-│   ├── pages/      # Blog pages (Homepage, PostPage, etc.)
-│   ├── data/       # Static JSON data for posts
-│   ├── styles/     # CSS and Tailwind CSS files
-│   └── App.js      # Main application file
-├── package.json    # Project metadata and dependencies
+├── images/         # Static assets (images,)
+│   pages/      # Blog pages (Homepage, dashboard Page,about us page,contact page.)
+│   json/       # Static JSON data for posts
+│   styles/     # CSS  files
+│   └script      # Main application file
 └── README.md       # Project documentation
 
 # Technologies Used
-HTML5 and CSS3
-JavaScript and React.js
-Tailwind CSS for rapid styling
+HTML and CSS
+JavaScript 
+firebase for authentication
