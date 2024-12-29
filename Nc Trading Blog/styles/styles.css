@@ -13,7 +13,7 @@ li {
 /* Header */
 header {
   background-color: #2d3e50;
-  color: #fff;
+  color:white;
   padding: 60px 0;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,7 @@ header h1 {
   margin-left: 20px;
   font-size: 2em;
   font-weight: bold;
+  list-style: none;
   left: 20px; 
   top: 20px;
   display: flex;
@@ -42,6 +43,7 @@ header nav ul {
   display: flex;
   gap: 20px;
   align-items: center;
+  
 }
 
 header nav a {
