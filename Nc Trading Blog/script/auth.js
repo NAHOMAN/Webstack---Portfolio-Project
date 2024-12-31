@@ -1,5 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword,
+  signOut 
+} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
 // Firebase Configuration
 const firebaseConfig = {
@@ -16,76 +21,101 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Get Modal and Buttons
+// DOM Elements
 const modal = document.getElementById("auth-modal");
-const signUpBtn = document.getElementById("sign-up-btn");
-const signInBtn = document.getElementById("sign-in-btn");
-const closeModal = document.getElementById("close-modal");
 const signUpForm = document.getElementById("sign-up-form");
 const signInForm = document.getElementById("sign-in-form");
-const signUpSubmit = document.getElementById("sign-up-submit");
-const signInSubmit = document.getElementById("sign-in-submit");
+const successMessage = document.getElementById("success-message");
+const errorMessage = document.getElementById("error-message");
 
-// Event: Open Sign-Up Modal
-signUpBtn.addEventListener("click", () => {
+// Show/Hide Modals
+document.getElementById("sign-up-btn").addEventListener("click", () => {
   modal.classList.remove("hidden");
   signUpForm.classList.remove("hidden");
   signInForm.classList.add("hidden");
-  console.log("Sign-Up modal opened");
 });
 
-// Event: Open Sign-In Modal
-signInBtn.addEventListener("click", () => {
+document.getElementById("sign-in-btn").addEventListener("click", () => {
   modal.classList.remove("hidden");
   signInForm.classList.remove("hidden");
   signUpForm.classList.add("hidden");
-  console.log("Sign-In modal opened");
 });
 
-// Event: Close Modal
-closeModal.addEventListener("click", () => {
+document.getElementById("close-modal").addEventListener("click", () => {
   modal.classList.add("hidden");
-  console.log("Modal closed");
 });
+
+// Display Success Message
+function showSuccessMessage(message) {
+  successMessage.textContent = message;
+  successMessage.classList.remove("hidden");
+  successMessage.classList.add("show");
+
+  setTimeout(() => {
+    successMessage.classList.remove("show");
+    successMessage.classList.add("hidden");
+  }, 3000);
+}
+
+// Display Error Message
+function showErrorMessage(message) {
+  errorMessage.textContent = message;
+  errorMessage.classList.remove("hidden");
+  errorMessage.classList.add("show");
+
+  setTimeout(() => {
+    errorMessage.classList.remove("show");
+    errorMessage.classList.add("hidden");
+  }, 3000);
+}
 
 // Firebase Sign-Up
-signUpSubmit.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent form submission to avoid page refresh
+document.getElementById("sign-up-submit").addEventListener("click", (e) => {
+  e.preventDefault();
   const email = document.getElementById("sign-up-email").value;
   const password = document.getElementById("sign-up-password").value;
 
-  console.log("Attempting to sign up with email:", email);
-
   createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      console.log("User created successfully:", userCredential.user);
-      alert("Sign-Up Successful!");
+    .then(() => {
+      showSuccessMessage("Sign-Up Successful! Welcome!");
       modal.classList.add("hidden");
     })
     .catch((error) => {
-      console.error("Sign-Up error:", error);
-      alert(`Error: ${error.message}`);
+      console.error("Sign-Up Error:", error);
+      showErrorMessage(`Sign-Up Error: ${error.message}`);
     });
 });
 
 // Firebase Sign-In
-signInSubmit.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent form submission to avoid page refresh
+document.getElementById("sign-in-submit").addEventListener("click", (e) => {
+  e.preventDefault();
   const email = document.getElementById("sign-in-email").value;
   const password = document.getElementById("sign-in-password").value;
 
-  console.log("Attempting to sign in with email:", email);
-
   signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      console.log("User signed in successfully:", userCredential.user);
-      alert("Sign-In Successful!");
-
-      // Redirect to the Dashboard
-      window.location.href = "dashboard.html"; 
+    .then(() => {
+      showSuccessMessage("Sign-In Successful! ...");
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 3000);
     })
     .catch((error) => {
-      console.error("Sign-In error:", error);
-      alert(`Error: ${error.message}`);
+      console.error("Sign-In Error:", error);
+      showErrorMessage(`Sign-In Error: ${error.message}`);
+    });
+});
+
+// Firebase Logout
+document.getElementById("logout-btn").addEventListener("click", () => {
+  signOut(auth)
+    .then(() => {
+      showSuccessMessage("You have successfully logged out.");
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error("Logout Error:", error);
+      showErrorMessage(`Logout Error: ${error.message}`);
     });
 });
