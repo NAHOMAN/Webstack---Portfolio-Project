@@ -55,9 +55,23 @@
     <!-- User Actions Section -->
     <section id="user-actions">
       <h3>Actions</h3>
-      <button id="update-profile-btn">Update Profile</button>
-    </section>
+      <button id="edit-profile-btn" class="action-button">Edit Profile</button>
+      <!-- Edit Profile Button -->
+<!-- Update Profile Section (initially hidden) -->
+<section id="update-profile-section" class="hidden">
+  <h2>Update Profile</h2>
+  <label for="user-name-input">Update Name:</label>
+  <input type="text" id="user-name-input" placeholder="Enter new name">
 
+  <label for="user-photo-input">Update Photo URL:</label>
+  <input type="text" id="user-photo-input" placeholder="Enter new photo URL">
+
+  <button id="update-profile-btn">Update Profile</button>
+
+  <div id="success-message" class="hidden"></div>
+  <div id="error-message" class="hidden"></div>
+</section>
+    
     <!-- User Posts Section -->
     <section id="create-post">
       <h2>Create a Post</h2>
